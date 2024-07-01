@@ -90,6 +90,18 @@
       </div>
     </div>
   </section>
+
+   <script>
+    document.querySelectorAll('.gallery-div').forEach(div => {
+      div.addEventListener('touchstart', function() {
+        div.querySelector('iframe').style.pointerEvents = 'auto';
+      });
+
+      div.addEventListener('touchend', function() {
+        div.querySelector('iframe').style.pointerEvents = 'none';
+      });
+    });
+  </script>
 </body>
 
 </html>
